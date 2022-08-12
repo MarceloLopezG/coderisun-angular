@@ -39,7 +39,7 @@ export class SignupComponent implements OnInit {
         password: this.password
       }).subscribe(
         data => {
-          this.router.navigate(['login']); // go to home
+          this.router.navigate(['login']); // go to login
         },
         err => {
           this.error = true;
