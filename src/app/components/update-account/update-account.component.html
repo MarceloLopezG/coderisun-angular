@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card">
+                <h3 style="text-align: center; padding-top: 40px;"><b>Actualizar información</b></h3>
+                <div class="card-body" *ngFor="let item of dataList; let i=index">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Nombre"
+                            [(ngModel)]="firstName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Apellidos"
+                            [(ngModel)]="lastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                            [(ngModel)]="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="********"
+                            pattern="[a-zA-Z ]*" [(ngModel)]="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="********"
+                            pattern="[a-zA-Z ]*" [(ngModel)]="confirmPassword" required>
+                    </div>
+
+                    <!-- Alert -->
+                    <p>
+                        <ngb-alert [dismissible]="false" style="text-align: center;" *ngIf="error">
+                            <strong>Error!</strong> {{ msgError }}
+                        </ngb-alert>
+                    </p>
+
+                    <div style="text-align: center;">
+                        <button type="button" class="btn btn-primary" (click)="updateAccount()"><b>Actualizar datos</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

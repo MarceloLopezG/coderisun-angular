@@ -1,0 +1,15 @@
+.card{
+    border-style: none;
+    background-color: #eeeeee;  
+}
+
+.col-sm-5{
+    padding: 0;
+    background-color: #FFFFFF;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.card-body{
+    padding: 30px;
+}

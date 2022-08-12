@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card">
+                <h3 style="text-align: center; padding-top: 40px;"><b>Iniciar sesión</b></h3>
+                <div class="card-body">
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                            [(ngModel)]="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="********" [(ngModel)]="password" required>
+                    </div>
+                    
+                    <!-- Alert -->
+                    <p>
+                        <ngb-alert [dismissible]="false" style="text-align: center;" *ngIf="error">
+                            <strong>Error!</strong> {{ msgError }}
+                        </ngb-alert>
+                    </p>
+
+                    <div style="text-align: center;">
+                        <button type="button" class="btn btn-primary" (click)="login()"><b>Enviar</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
